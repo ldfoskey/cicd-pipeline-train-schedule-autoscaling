@@ -264,7 +264,15 @@ Installation
 
 Metrics Server can be installed either directly from YAML manifest or via the official Helm chart. To install the latest Metrics Server release from the components.yaml manifest, run the following command.
 
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+wget https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml 
+
+vim components.yaml:(see image file for where to place below entry)
+command:
+        - /metrics-server
+        - --kubelet-insecure-tls
+        - --kubelet-preferred-address-types=InternalIP
+kubectl apply -f components.yaml
 
 
 
