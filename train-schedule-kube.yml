@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
       - name: train-schedule-container
-        image: linuxacademycontent/train-schedule:autoscaling
+        image: ldfoskey007/train-schedule
         ports:
         - containerPort: 8081
         livenessProbe:
