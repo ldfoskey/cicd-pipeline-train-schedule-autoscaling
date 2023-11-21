@@ -77,4 +77,5 @@ spec:
     resource:
       name: cpu
       target:
+        type: Utilization
         averageUtilization: 50
